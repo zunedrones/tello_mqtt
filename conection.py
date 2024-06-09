@@ -1,4 +1,3 @@
-from djitellopy import Tello
 import socket
 
 ''''wlp2s0' e 'wlx002e2dc04580' são os nomes das interfaces de rede 
@@ -19,5 +18,6 @@ drone_2.sendto('takeoff'.encode(), 0, ('192.168.10.1', 8889))
 
 #%%Code to land:
 drone_1.sendto('land'.encode(), 0, ('192.168.10.1', 8889))
-drone_2.sendto('land'.encode(), 0, ('192.168.10.1', 8889)) 
+drone_2.sendto('land'.encode(), 0, ('192.168.10.1', 8889))
 
+drone_1.sendto('bat'.encode(), 0, ('192.168.10.1', 8889))
